@@ -13,6 +13,7 @@ import org.springframework.stereotype.Controller;
 
 import java.awt.event.ActionListener;
 import java.io.IOException;
+import java.util.Map;
 
 @Controller
 public class MainguiController {
@@ -36,6 +37,11 @@ public class MainguiController {
     class MenuItemListener  {
 
 
+        Map<String, String[]> menuConfig=Map.of(
+                         "menuItem1,",new String[]{"","",""},
+                         "menuItem2,",new String[]{"","",""}
+
+                                    );
 
 
         public void handle(ActionEvent e) {
@@ -49,7 +55,7 @@ public class MainguiController {
                 loader.setControllerFactory(context::getBean);
                 Parent root = loader.load();
 
-                ScrollPane scrollPane = (ScrollPane) root;
+                ScrollPane scrollPane = new ScrollPane(root);
                 scrollPane.setFitToWidth(true);
                 scrollPane.setFitToHeight(true);
                 Tab newTab = new Tab(tittle, scrollPane);
