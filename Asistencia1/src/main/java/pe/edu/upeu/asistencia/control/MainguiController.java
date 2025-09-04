@@ -12,7 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Controller;
 
-import java.awt.event.ActionListener;
+
 import java.io.IOException;
 import java.util.Map;
 
@@ -20,7 +20,7 @@ import java.util.Map;
 public class MainguiController {
 
     @FXML
-    private MenuItem menuItem1,menuItem2;
+    private MenuItem menuItem1,menuItem2,menuItem3;
     @FXML
     private MenuBar menuBar;
     @FXML
@@ -35,6 +35,8 @@ public class MainguiController {
         MenuItemListener miL = new MenuItemListener();
         menuItem1.setOnAction(miL::handle);
         menuItem2.setOnAction(miL::handle);
+        menuItem3.setOnAction(miL::handle);
+
 
 
     }
@@ -42,8 +44,9 @@ public class MainguiController {
 
 
         Map<String, String[]> menuConfig=Map.of(
-                         "menuItem1,",new String[]{"/fxml/main_participante.fxml","Participantes","T"},
-                         "menuItem2,",new String[]{"/fxml/login.fxml","Salir","C"}
+                         "menuItem1",new String[]{"/fxml/main_participante.fxml","Participantes","T"},
+                         "menuItem2",new String[]{"/fxml/login.fxml","Salir","C"},
+                         "menuItem3",new String[]{"/fxml/main_asistencia.fxml","Asistnecia","T"}
                                     );
 
 
@@ -74,17 +77,11 @@ public class MainguiController {
                 tabPane.getTabs().clear();
                 tabPane.getTabs().add(newTab);
             }catch (IOException ex) {
-                ex.printStackTrace();
                 throw new RuntimeException(ex);
             }
 
 
         }
-
-
-
-
-
 
     }
 
