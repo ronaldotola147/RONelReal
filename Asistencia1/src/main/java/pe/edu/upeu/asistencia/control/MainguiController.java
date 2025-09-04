@@ -1,6 +1,7 @@
 package pe.edu.upeu.asistencia.control;
 
 
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.fxml.FXML;
@@ -31,6 +32,9 @@ public class MainguiController {
 
     @FXML
     public void initialize() {
+        MenuItemListener miL = new MenuItemListener();
+        menuItem1.setOnAction(miL::handle);
+        menuItem2.setOnAction(miL::handle);
 
 
     }
@@ -38,14 +42,22 @@ public class MainguiController {
 
 
         Map<String, String[]> menuConfig=Map.of(
-                         "menuItem1,",new String[]{"","",""},
-                         "menuItem2,",new String[]{"","",""}
-
+                         "menuItem1,",new String[]{"/fxml/main_participante.fxml","Participantes","T"},
+                         "menuItem2,",new String[]{"/fxml/login.fxml","Salir","C"}
                                     );
 
 
         public void handle(ActionEvent e) {
-
+            String id=((MenuItem) e.getSource()).getId();
+            if(menuConfig.containsKey(id)) {
+                String[] mi = menuConfig.get(id);
+                if (mi[2].equals("C")) {
+                    Platform.exit();
+                    System.exit(0);
+                } else {
+                    abrirArchivoFXML(mi[0], mi[1]);
+                }
+            }
         }
 
         public void abrirArchivoFXML(String fileName, String tittle) {
