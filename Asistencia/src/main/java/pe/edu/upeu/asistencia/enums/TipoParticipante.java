@@ -4,23 +4,13 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
-@NoArgsConstructor
 @AllArgsConstructor
+@NoArgsConstructor
 @Getter
-
 public enum TipoParticipante {
-    ASISTENTE(   "Asistente"),
-    ORGANIZADOR(  "Organizador"),
+    ASISTENTE("Asistente"),
+    ORGANIZADOR("Organizador"),
     PONENTE("Ponente"),;
 
-
-
     private String descripcion;
-
-
-
-
-
-
-
 }

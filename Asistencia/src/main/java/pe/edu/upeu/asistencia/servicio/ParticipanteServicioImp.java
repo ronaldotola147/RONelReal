@@ -7,8 +7,7 @@ import pe.edu.upeu.asistencia.repositorio.ParticipanteRepository;
 import java.util.List;
 
 @Service
-public class ParticipanteServicioiImp extends ParticipanteRepository implements ParticipanteServicioI {
-
+public class ParticipanteServicioImp extends ParticipanteRepository implements ParticipanteServicioI {
 
     @Override
     public void save(Participante participante) {
@@ -16,10 +15,9 @@ public class ParticipanteServicioiImp extends ParticipanteRepository implements 
     }
 
     @Override
-    public List<Participante> findAll() {
+    public List<Participante> findAll(){
         if(participantes.isEmpty()){
-            return super.findALL();
-
+            return super.findAll();
         }
         return participantes;
     }
@@ -32,11 +30,11 @@ public class ParticipanteServicioiImp extends ParticipanteRepository implements 
     @Override
     public void delete(int index) {
         participantes.remove(index);
-
     }
 
     @Override
     public Participante findById(int index) {
         return participantes.get(index);
     }
+
 }
