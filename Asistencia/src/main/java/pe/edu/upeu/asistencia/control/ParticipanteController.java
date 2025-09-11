@@ -47,6 +47,7 @@ public class ParticipanteController {
         tipoPartCol = new TableColumn("Tipo Participante");
         tipoPartCol.setMinWidth(160);
         opcionCol = new TableColumn("Opciones");
+        opcionCol.setMinWidth(200);
         tableView.getColumns().addAll(dniCol, nombreCol, apellidoCol, carreraCol, tipoPartCol, opcionCol);
     }
 
