@@ -7,7 +7,5 @@ public class ClaseGeneral {
 
         Loro l = new Loro();
         l.sonidoAnimal();
-
-
     }
 }

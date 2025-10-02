@@ -37,15 +37,12 @@ public class MainguiController {
     private ApplicationContext context;
     @FXML
     public void initialize() {
-
         comboBox.getItems().addAll("Estilo por defecto", "Estilo Oscuro"
                 , "Estilo Azul", "Estilo Verde", "Estilo Rosado");
         comboBox.setOnAction(e->cambiarEstilo());
-
         customMenuEstilo.setHideOnClick(false);
         menuEstilo.getItems().add(customMenuEstilo);
         menuBar.getMenus().add(menuEstilo);
-
         MenuItemListener miL=new MenuItemListener();
         menuItem1.setOnAction(miL::handle);
         menuItem2.setOnAction(miL::handle);
@@ -56,6 +53,7 @@ public class MainguiController {
     public void cambiarEstilo(){
         String estiloSeleccionado=comboBox.getSelectionModel().getSelectedItem();
         Scene scene=bp.getScene();
+        scene.getStylesheets().clear();
         switch (estiloSeleccionado){
             case "Estilo Oscuro":
                 scene.getStylesheets().add(getClass().getResource("/css/estilo-oscuro.css").toExternalForm()); break;
@@ -65,7 +63,7 @@ public class MainguiController {
                 scene.getStylesheets().add(getClass().getResource("/css/estilo-verde.css").toExternalForm()); break;
             case "Estilo Rosado":
                 scene.getStylesheets().add(getClass().getResource("/css/estilo-rosado.css").toExternalForm()); break;
-            default: scene.getStylesheets().clear(); break;
+            default:  break;
         }
     }
 
@@ -114,6 +112,5 @@ public class MainguiController {
 
         }
     }
-
 
 }

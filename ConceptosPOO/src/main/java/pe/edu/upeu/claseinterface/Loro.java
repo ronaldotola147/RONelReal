@@ -1,7 +1,6 @@
 package pe.edu.upeu.claseinterface;
 
 public class Loro implements Animal {
-
     @Override
     public void emitirSonido() {
         System.out.println("Hola amigo, no seas flojo");
@@ -9,7 +8,6 @@ public class Loro implements Animal {
 
     @Override
     public void dormir() {
-        System.out.println("No molestar que me da Zzzzz....Zzzzzz..");
-
+        System.out.println("No molestar que me da Zzzz....Zzz..");
     }
 }
