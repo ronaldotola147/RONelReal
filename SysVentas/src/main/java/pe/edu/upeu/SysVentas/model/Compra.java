@@ -51,7 +51,6 @@ public class Compra {
     //@JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @Column(name = "fecha_reg", nullable = false)
     private LocalDateTime fechaReg;
-    @OneToMany(mappedBy = "compra", cascade = CascadeType.ALL,
-            orphanRemoval = true)
+    @OneToMany(mappedBy = "compra", cascade = CascadeType.ALL,  orphanRemoval = true)
     private List<Compra> compraDetalles;
 }
