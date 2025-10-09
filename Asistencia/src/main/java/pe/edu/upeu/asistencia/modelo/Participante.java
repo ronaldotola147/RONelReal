@@ -1,6 +1,7 @@
 package pe.edu.upeu.asistencia.modelo;
 
 import javafx.beans.property.BooleanProperty;
+import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -19,6 +20,4 @@ public class Participante {
     private TipoParticipante tipoParticipante;
     private BooleanProperty estado;
 
-    public void setEstado(boolean b) {
-    }
 }
