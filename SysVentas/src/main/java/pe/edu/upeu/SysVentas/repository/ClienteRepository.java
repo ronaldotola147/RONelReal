@@ -1,4 +1,4 @@
-package pe.edu.upeu.SysVentas.repository;
+package pe.edu.upeu.sysventas.repository;
 
 import pe.edu.upeu.sysventas.model.Cliente;
 

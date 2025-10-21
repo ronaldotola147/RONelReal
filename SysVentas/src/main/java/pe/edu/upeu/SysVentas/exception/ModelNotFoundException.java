@@ -1,4 +1,4 @@
-package pe.edu.upeu.SysVentas.exception;
+package pe.edu.upeu.sysventas.exception;
 
 import lombok.Getter;
 

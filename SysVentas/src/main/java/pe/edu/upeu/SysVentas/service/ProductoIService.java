@@ -1,7 +1,7 @@
-package pe.edu.upeu.SysVentas.service;
+package pe.edu.upeu.sysventas.service;
 
-import pe.edu.upeu.SysVentas.dto.ModeloDataAutocomplet;
-import pe.edu.upeu.SysVentas.model.Producto;
+import pe.edu.upeu.sysventas.dto.ModeloDataAutocomplet;
+import pe.edu.upeu.sysventas.model.Producto;
 
 import java.util.List;
 

@@ -1,11 +1,11 @@
-package pe.edu.upeu.SysVentas.model;
+package pe.edu.upeu.sysventas.model;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import pe.edu.upeu.SysVentas.enums.TipoDocumento;
+import pe.edu.upeu.sysventas.enums.TipoDocumento;
 
 @Builder
 @NoArgsConstructor

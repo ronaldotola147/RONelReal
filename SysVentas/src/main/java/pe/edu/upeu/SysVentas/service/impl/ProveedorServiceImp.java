@@ -1,4 +1,4 @@
-package pe.edu.upeu.SysVentas.service.impl;
+package pe.edu.upeu.sysventas.service.impl;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;

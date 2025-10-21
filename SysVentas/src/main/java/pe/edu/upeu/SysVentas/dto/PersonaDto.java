@@ -1,4 +1,4 @@
-package pe.edu.upeu.SysVentas.dto;
+package pe.edu.upeu.sysventas.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

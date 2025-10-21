@@ -1,4 +1,4 @@
-package pe.edu.upeu.SysVentas;
+package pe.edu.upeu.sysventas;
 
 public class RunJavaFx {
     public static void main(String[] args) {

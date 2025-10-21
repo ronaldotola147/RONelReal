@@ -1,4 +1,4 @@
-package pe.edu.upeu.SysVentas;
+package pe.edu.upeu.sysventas;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -14,16 +14,13 @@ import org.springframework.context.ConfigurableApplicationContext;
 @SpringBootApplication
 public class SysVentasApplication extends Application {
 
-
 	private ConfigurableApplicationContext applicationContext;
 	private Parent root;
-
 
 
 	public static void main(String[] args) {
 		//SpringApplication.run(SysVentasApplication.class, args);
 		launch(args);
-
 	}
 
 	@Override
@@ -31,10 +28,10 @@ public class SysVentasApplication extends Application {
 		SpringApplicationBuilder builder = new SpringApplicationBuilder(SysVentasApplication.class);
 		builder.application().setWebApplicationType(WebApplicationType.NONE);
 		applicationContext=builder.run(getParameters().getRaw().toArray(new String[0]));
+
 		FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/login.fxml"));
 		loader.setControllerFactory(applicationContext::getBean);
 		root = loader.load();
-
 	}
 
 	@Override
@@ -43,7 +40,5 @@ public class SysVentasApplication extends Application {
 		stage.setScene(scene);
 		stage.setTitle("SysVentas SysCenterLife");
 		stage.show();
-
-
 	}
 }

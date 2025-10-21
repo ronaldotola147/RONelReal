@@ -1,4 +1,4 @@
-package pe.edu.upeu.SysVentas.service.impl;
+package pe.edu.upeu.sysventas.service.impl;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -13,5 +13,10 @@ public class UsuarioServiceImp extends CrudGenericoServiceImp<Usuario, Long> imp
     @Override
     protected ICrudGenericoRepository<Usuario, Long> getRepo() {
         return usuarioRepository;
+    }
+
+    @Override
+    public Usuario loginUsuario(String user, String clave) {
+        return usuarioRepository.loginUsuario(user, clave);
     }
 }

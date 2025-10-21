@@ -1,4 +1,4 @@
-package pe.edu.upeu.SysVentas.dto;
+package pe.edu.upeu.sysventas.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -11,6 +11,7 @@ public class ModeloDataAutocomplet {
     String idx;
     String nameDysplay;
     String otherData;
+
     @Override
     public String toString() {
         return nameDysplay+" "+idx+" " + otherData;
